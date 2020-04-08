@@ -1,5 +1,7 @@
 body {
-    max-width: 90%;
+    max-width: 100%;
+    margin-left: 7vw;
+    margin-right: 7vw;
 }
 h3 {
     font-size:8vw;
