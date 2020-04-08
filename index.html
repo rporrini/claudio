@@ -12,22 +12,45 @@
     <style>
         body {
             max-width: 100%;
-            margin-left: 7vw;
-            margin-right: 7vw;
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
             color: 	#282828;
         }
-        h3 {
-            font-size:7vw;
-        }
-        p {
-            font-size:5vw;
-        }
         img {
             max-width:100%;
-            width: 100%;
             height:auto;
+        }
+
+        @media screen and (min-width: 801px) {
+            body {
+                margin-left: 25vw;
+                margin-right: 25vw;
+            }
+            img {
+                width: 90%;
+            }
+            h3 {
+                font-size:3vw;
+            }
+            p {
+                font-size:2vw;
+            }
+        }
+        
+        @media screen and (max-width: 800px) {
+            body {
+                margin-left: 7vw;
+                margin-right: 7vw;
+            }
+            img {
+                width: 100%;
+            }
+            h3 {
+                font-size:6vw;
+            }
+            p {
+                font-size:5vw;
+            }
         }
     </style>
 </head>
@@ -35,8 +58,8 @@
     <h3>Claudio non è ancora nato!</h3>
     <img src="pregnancy.gif" />
     <p>Ti promettiamo che appena arriverà saremo felicissimi di condividere la nostra gioia con te. Se la curiosità ha il sopravvento ti invitiamo a fare refresh della pagina quante volte vuoi :)</p>
+    <p>Ami e Ricky.</p>
     <!--<h3>Claudio è arrivato!</h3>
     <img src="claudio.jpeg" />-->
-    <p>Ami e Ricky.</p>
 </body>
 </html>
