@@ -10,26 +10,22 @@
     <meta property="og:site_name" content="Claudio">
     <style>
         html {
-            height: 100%;
+            height: 95%;
         }
         body {
             max-width: 100%;
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
             color: 	#282828;
-            display: flex;
-            flex-direction: column;
-            height: 95vh;
+            min-height: 100%;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
         }
         img {
             max-width:100%;
             height:auto;
         }
-        .content {
-            flex: 1 0 auto;
-        }
-        .footer {
-            flex-shrink: 0;
+        footer {
             color: #696969;
         }
 
@@ -47,7 +43,7 @@
             p {
                 font-size:2vw;
             }
-            .footer {
+            footer {
                 font-size:1.3vw;
             }
         }
@@ -66,21 +62,23 @@
             p {
                 font-size:5vw;
             }
-            .footer {
+            footer {
                 font-size:3vw;
             }
         }
     </style>
 </head>
 <body>
-    <div class="content">
+    <header>
         <h3>Claudio non è ancora nato!</h3>
+    </header>
+    <main>
         <img src="pregnancy.gif" />
         <p>Ti promettiamo che appena arriverà saremo felicissimi di condividere la nostra gioia con te. Se la curiosità ha il sopravvento ti invitiamo ad <a href=".">aggiornare la pagina</a> quante volte vuoi :)</p>
         <p>Ami e Ricky.</p>
         <!--<h3>Claudio è arrivato!</h3>
         <img src="claudio.jpeg" />-->
-    </div>
-    <div class="footer">Milano, Aprile 2020.</div>
+    </main>
+    <footer>Milano, Aprile 2020.</footer>
 </body>
 </html>
