@@ -1,0 +1,30 @@
+{
+  "name": "claudio",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "webpack-dev-server --port=3000 -d",
+    "build": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rporrini/claudio.git"
+  },
+  "author": "Riccardo Porrini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rporrini/claudio/issues"
+  },
+  "homepage": "https://github.com/rporrini/claudio#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.2.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
