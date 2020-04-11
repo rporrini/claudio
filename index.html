@@ -10,15 +10,29 @@
     <meta property="og:image" content="https://rporrini.github.io/claudio/mystery.png">
     <meta property="og:site_name" content="Claudio">
     <style>
+        html {
+            height: 100%;
+        }
         body {
             max-width: 100%;
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
             color: 	#282828;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
         }
         img {
             max-width:100%;
             height:auto;
+        }
+        .content {
+            flex: 1 0 auto;
+        }
+        .footer {
+            flex-shrink: 0;
+            color: #696969;
+            margin-bottom: 1vh;
         }
 
         @media screen and (min-width: 801px) {
@@ -34,6 +48,9 @@
             }
             p {
                 font-size:2vw;
+            }
+            .footer {
+                font-size:1.3vw;
             }
         }
         
@@ -51,15 +68,21 @@
             p {
                 font-size:5vw;
             }
+            .footer {
+                font-size:3vw;
+            }
         }
     </style>
 </head>
 <body>
-    <h3>Claudio non è ancora nato!</h3>
-    <img src="pregnancy.gif" />
-    <p>Ti promettiamo che appena arriverà saremo felicissimi di condividere la nostra gioia con te. Se la curiosità ha il sopravvento ti invitiamo ad <a href=".">aggiornare la pagina</a> quante volte vuoi :)</p>
-    <p>Ami e Ricky.</p>
-    <!--<h3>Claudio è arrivato!</h3>
-    <img src="claudio.jpeg" />-->
+    <div class="content">
+        <h3>Claudio non è ancora nato!</h3>
+        <img src="pregnancy.gif" />
+        <p>Ti promettiamo che appena arriverà saremo felicissimi di condividere la nostra gioia con te. Se la curiosità ha il sopravvento ti invitiamo ad <a href=".">aggiornare la pagina</a> quante volte vuoi :)</p>
+        <p>Ami e Ricky.</p>
+        <!--<h3>Claudio è arrivato!</h3>
+        <img src="claudio.jpeg" />-->
+    </div>
+    <div class="footer">Milano, Aprile 2020.</div>
 </body>
 </html>
