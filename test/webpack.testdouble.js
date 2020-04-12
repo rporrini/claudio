@@ -22,12 +22,13 @@ const buildCompiler = (fs, webpackConfig) => {
 }
 
 const compile = () => {
-    const compiler = buildCompiler(createFsFromVolume(new Volume()), configuration())
+    const fileSystem = createFsFromVolume(new Volume())
+    const compiler = buildCompiler(fileSystem, configuration())
     return new Promise((resolve, reject) => {
         compiler.run((errors, stats) => {
             if (errors) reject (new Error(errors))
             if (stats.hasErrors()) reject(new Error(stats.toJson().errors))
-            resolve(stats);
+            resolve(fileSystem);
         })
     }) 
 }
