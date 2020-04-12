@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "webpack-dev-server --port=3000 -d",
-    "build": "webpack -p && git add .",
+    "build": "rm -r docs && webpack -p && git add .",
     "test": "jest --coverage --collectCoverageFrom=src/**/*"
   },
   "pre-commit": [
@@ -12,7 +12,9 @@
     "build"
   ],
   "jest": {
-    "setupFilesAfterEnv": ["./test/setup.js"] 
+    "setupFilesAfterEnv": [
+      "./test/setup.js"
+    ]
   },
   "repository": {
     "type": "git",
