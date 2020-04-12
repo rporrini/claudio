@@ -21,7 +21,7 @@ module.exports = () => {
       .concat(new html({
         filename: 'index.html',
         template: 'index.html',
-        inject: 'head',
+        inject: 'body',
         hash: true
       }),
       new copy([

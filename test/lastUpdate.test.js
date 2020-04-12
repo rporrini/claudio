@@ -18,6 +18,14 @@ test('should print a default string when the delta is less than 2 minutes', () =
     expect(result).toBe('pochi secondi')
 })
 
+test('should print a default string when the delta is 0 minutes', () => {
+    const now = () => new Date('2011-10-10T14:15:00')
+
+    const result = lastUpdated().from(now).starting(15).asString()
+
+    expect(result).toBe('pochi secondi')
+})
+
 test('should signal minutes from the start of the hour', () => {
     const now = () => new Date('2011-10-10T14:15:00')
 
