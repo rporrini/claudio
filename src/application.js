@@ -5,6 +5,6 @@ const updated = lastUpdated().starting(39).from(now)
 
 const footer = document.body.getElementsByTagName('footer')[0]
 const lastUpdatedElement = document.createElement('span')
-lastUpdatedElement.innerHTML = `Ultimo aggiornamento: ${updated.asString()} fa.`
+lastUpdatedElement.innerHTML = ` Ultimo aggiornamento: ${updated.asString()} fa.`
 
 footer.appendChild(lastUpdatedElement)
