@@ -5,7 +5,7 @@
   "scripts": {
     "start": "webpack-dev-server --port=3000 -d",
     "build": "webpack -p && git add .",
-    "test": "jest --coverage --collectCoverageFrom=src/**/*",
+    "test": "jest --coverage --collectCoverageFrom=src/**/*"
   },
   "pre-commit": [
     "test",
