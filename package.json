@@ -4,8 +4,8 @@
   "description": "",
   "scripts": {
     "start": "webpack-dev-server --port=3000 -d",
-    "build": "webpack -p",
-    "test": "jest --coverage --collectCoverageFrom=src/**/*"
+    "build": "webpack -p && git add .",
+    "test": "jest --coverage --collectCoverageFrom=src/**/*",
   },
   "pre-commit": [
     "test",
