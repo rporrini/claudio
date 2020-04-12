@@ -8,7 +8,8 @@
     "test": "jest --coverage --collectCoverageFrom=src/**/*"
   },
   "pre-commit": [
-    "test"
+    "test",
+    "build"
   ],
   "jest": {
     "setupFilesAfterEnv": ["./test/setup.js"] 

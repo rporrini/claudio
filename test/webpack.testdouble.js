@@ -5,12 +5,9 @@ const webpack = require('webpack')
 const configuration = require('../webpack.config')
 
 const patchMemfs = (fs) => {
-    if (fs.join) {
-        return fs
-    }
-    const nextFs = Object.create(fs)
-    nextFs.join = joinPath
-    return nextFs
+    const patchedFileSystem = Object.create(fs)
+    patchedFileSystem.join = joinPath
+    return patchedFileSystem
 }
 
 const buildCompiler = (fs, webpackConfig) => {
@@ -26,7 +23,7 @@ const compile = () => {
     const compiler = buildCompiler(fileSystem, configuration())
     return new Promise((resolve, reject) => {
         compiler.run((errors, stats) => {
-            if (errors) reject (new Error(errors))
+            if (errors) reject(new Error(errors))
             if (stats.hasErrors()) reject(new Error(stats.toJson().errors))
             resolve(fileSystem);
         })
