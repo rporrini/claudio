@@ -1,5 +1,11 @@
-import { compile } from "./webpack.testdouble"
+import { compile as compilation } from "./webpack.testdouble"
 
-test('webpack should compile', () => {
-    return expect(compile()).resolves.toBeTruthy()
+let compiledApplication;
+
+beforeAll(async () => {
+    compiledApplication = await compilation()
+})
+
+test('webpack should compile', async () => {
+    expect(compiledApplication).toBeTruthy()
 })
