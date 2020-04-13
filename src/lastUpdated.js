@@ -1,6 +1,4 @@
-import { readable } from './minutes'
-
-const lastUpdated = (now, fromMinute = 0, print = readable) => ({
+const lastUpdated = (now, fromMinute = 0, print) => ({
     asString: () => {
         if (!now) return print(0)
         const currentMinutes = new Date(now()).getMinutes()

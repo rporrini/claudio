@@ -1,11 +1,11 @@
 import {lastUpdated} from './lastUpdated'
-import {constant} from './minutes'
+import { readable } from './minutes'
+import { lastUpdatedElement } from './lastUpdatedElement'
 
-const now = Date.now
-const updated = lastUpdated().starting(39).from(now)
+const updated = lastUpdated()
+                    .withPrinter(readable)
+                    .starting(39)
+                    .from(Date.now)
 
-const footer = document.body.getElementsByTagName('footer')[0]
-const lastUpdatedElement = document.createElement('span')
-lastUpdatedElement.innerHTML = ` Ultimo aggiornamento: ${updated.asString()}.`
-
-footer.appendChild(lastUpdatedElement)
+document.body.getElementsByTagName('footer')[0]
+             .appendChild(lastUpdatedElement(updated))
