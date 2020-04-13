@@ -26,6 +26,9 @@ module.exports = () => {
       }),
       new copy([
         { from: 'assets', to: 'assets' }
-      ]))
+      ])),
+    devServer: {
+      disableHostCheck: true,
+    }
   }
 }
