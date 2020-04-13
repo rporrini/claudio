@@ -1,4 +1,5 @@
 import {lastUpdated} from './lastUpdated'
+import {constant} from './minutes'
 
 const now = Date.now
 const updated = lastUpdated().starting(39).from(now)

@@ -1,6 +1,11 @@
 const path = require('path')
 const html = require('html-webpack-plugin')
 const copy = require('copy-webpack-plugin');
+const webpack = require('webpack')
+
+const date = require('child_process')
+  .execSync('git log -n 1 --date=format:"%d %b. %Y" --pretty=format:%cd')
+  .toString();
 
 module.exports = () => {
   return {
@@ -26,6 +31,9 @@ module.exports = () => {
       }),
       new copy([
         { from: 'assets', to: 'assets' }
-      ]))
+      ]),
+      new webpack.DefinePlugin({
+        DATE: JSON.stringify(date),
+      }))
   }
 }
