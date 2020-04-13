@@ -1,15 +1,16 @@
-const print = delta => delta > 1 ? `${delta} minuti`: 'pochi secondi'
+import { readable } from './minutes'
 
-const lastUpdated = (now, fromMinute = 0) => ({
+const lastUpdated = (now, fromMinute = 0, print = readable) => ({
     asString: () => {
-        if (!now) return 'pochi secondi'
+        if (!now) return print(0)
         const currentMinutes = new Date(now()).getMinutes()
         if(currentMinutes > fromMinute) return print(currentMinutes - fromMinute)
         if(currentMinutes < fromMinute) return print(60 - fromMinute + currentMinutes)
-        return 'pochi secondi'
+        return print(0)
     },
-    starting: fromMinute => lastUpdated(now, fromMinute),
-    from: now => lastUpdated(now, fromMinute)
+    starting: fromMinute => lastUpdated(now, fromMinute, print),
+    from: now => lastUpdated(now, fromMinute, print),
+    withPrinter: print => lastUpdated(now, fromMinute, print)
 })
 
 export { lastUpdated }
