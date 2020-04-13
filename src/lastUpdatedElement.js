@@ -1,6 +1,6 @@
 const lastUpdatedElement = updated => {
     const element = document.createElement('span')
-    element.innerHTML = ` Ultimo aggiornamento: ${updated.asString()}.` 
+    element.innerHTML = `Milano, ${updated.asString()}.` 
     return element   
 }
 
