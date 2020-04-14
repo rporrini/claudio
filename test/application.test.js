@@ -20,7 +20,7 @@ describe('Webpack compilation', () => {
         const assets = compiledApplication.readdirSync('docs/assets')
     
         expect(assets).toContain('mystery.png')
-        expect(assets).toContain('pregnancy.gif')
+        expect(assets).toContain('claudio.gif')
     })
     
     test('webpack should include the app in the index', () => {
@@ -30,11 +30,7 @@ describe('Webpack compilation', () => {
 
 describe('application', () => {
 
-    test('should attach the last updated string to the page', () => {
-        expect(document.body.innerHTML).toMatch('aggiornamento')
-    })
-
     test('should attach the last updated minute string to the page', () => {
-        expect(document.body.innerHTML).toMatch(/minuti|secondi/)
+        expect(document.body.innerHTML).toMatch(/14 Aprile 2020/)
     })
 })

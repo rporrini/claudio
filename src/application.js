@@ -1,9 +1,9 @@
 import {lastUpdated} from './lastUpdated'
-import { readable } from './minutes'
+import { constant } from './minutes'
 import { lastUpdatedElement } from './lastUpdatedElement'
 
 const updated = lastUpdated()
-                    .withPrinter(readable)
+                    .withPrinter(constant('14 Aprile 2020'))
                     .starting(38)
                     .from(Date.now)
 
